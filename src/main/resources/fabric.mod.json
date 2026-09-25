@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "sprint-indicator",
+	"version": "${version}",
+	"name": "Sprint Indicator",
+	"description": "A lightweight and Customizable HUD mod that displays a sprint toggle status indicator",
+	"authors": [
+		"Lwky_S4NE"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/sprint-indicator/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sprintindicator.SprintIndicator"
+		],
+		"client": [
+			"com.sprintindicator.client.SprintIndicatorClient"
+		],
+		"modmenu": [
+			"com.sprintindicator.client.SprintIndicatorModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"sprint-indicator.mixins.json",
+		{
+			"config": "sprint-indicator.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*",
+		"cloth-config": "*"
+	}
+}
